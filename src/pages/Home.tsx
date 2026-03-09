@@ -1,0 +1,389 @@
+import RecommendationSection from "../components/RecommendationSection";
+import SkillsSection from "../components/SkillsSection";
+import ContactSection from "../components/ContactSection";
+import { Link } from "react-router-dom";
+
+export default function Home() {
+  return (
+    <div className="max-w-7xl mx-auto px-6">
+      {/* HERO */}
+      <section id="about" className="pt-10 md:pt-14 pb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-stretch">
+          {/* PHOTO */}
+          <div className="lg:col-span-4">
+            <div className="rounded-2xl overflow-hidden border border-[var(--border)] dark:border-[var(--border-dark)] bg-black/5 dark:bg-white/5 lg:h-[560px]">
+              <img
+                src="/profile.jpg"
+                alt="Portrait"
+                className="w-full h-full object-cover contrast-[102%] saturate-[95%]"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+          {/* TEXTE */}
+          <div className="lg:col-span-8 lg:h-[560px] flex flex-col justify-center">
+            <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight leading-none">
+              KILLIAN MARCANTEI
+            </h1>
+
+            <p className="mt-4 text-3xl md:text-4xl font-extrabold tracking-wide">
+              SYSTEM DESIGNER
+            </p>
+
+            <div className="mt-8 space-y-6 text-base md:text-lg leading-relaxed max-w-3xl">
+              <p>
+                Designing progression systems, player mechanics, and
+                state-driven architectures with clarity, scalability, and
+                production rigor.
+              </p>
+
+              <p>
+                With 4+ years in real-time interactive development and
+                structured production environments, I bring modular thinking,
+                technical collaboration, and hands-on experience in Unreal
+                Engine and Unity. I focus on building coherent systems that
+                support both gameplay feel and long-term scalability.
+              </p>
+
+              <p>
+                I approach systems design iteratively, prototyping mechanics
+                early and refining them through testing and feedback. My goal is
+                to create systems that feel intuitive to players at first
+                contact while revealing depth through progression and mastery.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* VIDEO BANDEROLE */}
+      <section className="pb-20">
+        <div className="rounded-2xl overflow-hidden border border-[var(--border)] dark:border-[var(--border-dark)] bg-black/5 dark:bg-white/5 shadow-sm">
+          <video
+            src="/showreel.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            className="w-full aspect-video object-cover"
+          />
+        </div>
+
+        <p className="mt-4 text-sm opacity-70 text-center">
+          Gameplay reel — Selection of student & professional projects
+        </p>
+      </section>
+
+      <section id="experience" className="w-full pt-6 pb-24">
+        <div className="max-w-8xl mx-auto px-6">
+          <h2 className="text-3xl font-semibold tracking-wide mb-20 text-left">
+            Experience
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-20 text-center">
+            {/* DASSAULT */}
+            <div className="flex flex-col items-center space-y-8">
+              <div className="h-32 flex items-center justify-center">
+                <img
+                  src="/dassault.png"
+                  alt="Dassault Systèmes"
+                  className="h-28 object-contain opacity-85 hover:opacity-100 transition dark:invert"
+                />
+              </div>
+
+              <div className="w-full">
+                <h3 className="text-lg font-medium">Software Engineer</h3>
+                <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">
+                  Dassault Systèmes — 2025 to 2025
+                </p>
+
+                <ul className="text-sm text-gray-700 dark:text-gray-300 space-y-3">
+                  <li className="whitespace-nowrap">
+                    Contributed to large-scale interconnected 3D architecture
+                  </li>
+                  <li className="whitespace-nowrap">
+                    Implemented state-synchronized front-end systems
+                  </li>
+                  <li className="whitespace-nowrap">
+                    Delivered production-grade features via CI/CD
+                  </li>
+                </ul>
+
+                <p className="mt-8 text-base font-semibold text-gray-800 dark:text-gray-200">
+                  Projects: <span className="font-bold">xHighlight</span>
+                </p>
+              </div>
+            </div>
+
+            {/* AXEAL */}
+            <div className="flex flex-col items-center space-y-8">
+              <div className="h- flex items-center justify-center">
+                <img
+                  src="/axeal.png"
+                  alt="Axeal"
+                  className="h-30 scale-[0.80] object-contain opacity-90 hover:opacity-100 transition duration dark:invert"
+                />
+              </div>
+
+              <div className="w-full">
+                <h3 className="text-lg font-medium">Systems Designer</h3>
+                <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">
+                  Axeal — 2022 to 2025
+                </p>
+
+                <ul className="text-sm text-gray-700 dark:text-gray-300 space-y-3">
+                  <li className="whitespace-nowrap">
+                    Designed modular interaction systems (UE5 / Unity)
+                  </li>
+                  <li className="whitespace-nowrap">
+                    Structured state-driven behaviors & progression logic
+                  </li>
+                  <li className="whitespace-nowrap">
+                    Delivered scalable real-time applications
+                  </li>
+                </ul>
+
+                <p className="mt-8 text-base font-semibold text-gray-800 dark:text-gray-200">
+                  Projects: <span className="font-bold">Hagily</span>{" "}
+                  <span className="opacity-60">•</span>{" "}
+                  <span className="font-bold">Enginify</span>{" "}
+                  <span className="opacity-60">•</span>{" "}
+                  <span className="font-bold">TechTraining</span>
+                </p>
+              </div>
+            </div>
+
+            {/* DEATHSCAPE */}
+            <div className="flex flex-col items-center space-y-8">
+              <div className="h-32 flex items-center justify-center">
+                <img
+                  src="/deathscape.png"
+                  alt="DeathScape"
+                  className="h-28 scale-115 object-contain opacity-85 hover:opacity-100 transition duration dark:invert"
+                />
+              </div>
+
+              <div className="w-full">
+                <h3 className="text-lg font-medium">Game Designer</h3>
+                <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">
+                  DeathScape — 2019 to 2021
+                </p>
+
+                <ul className="text-sm text-gray-700 dark:text-gray-300 space-y-3">
+                  <li className="whitespace-nowrap">
+                    Designed interconnected puzzle & progression systems
+                  </li>
+                  <li className="whitespace-nowrap">
+                    Built Unity prototypes validating interaction logic
+                  </li>
+                  <li className="whitespace-nowrap">
+                    Structured complete player experience flows
+                  </li>
+                </ul>
+
+                <p className="mt-8 text-base font-semibold text-gray-800 dark:text-gray-200">
+                  Projects:{" "}
+                  <span className="font-bold">Escape Room Experiences</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" className="w-full py-1">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="text-3xl font-semibold tracking-wide mb-20 text-left text-black dark:text-white">
+            Projects
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-x-16 gap-y-20">
+            {/* ESCALATION */}
+            <a
+              href="/projects/escalation"
+              className="group block cursor-pointer"
+              style={{ "--img-scale": 1.0 } as React.CSSProperties}
+            >
+              <div className="relative overflow-hidden rounded-2xl aspect-[3/2] bg-black ring-1 ring-black/10 dark:ring-white/10">
+                <img
+                  src="/escalation.png"
+                  alt=""
+                  aria-hidden="true"
+                  className="absolute inset-0 w-full h-full object-cover object-center scale-110 blur-xl opacity-25"
+                />
+
+                <img
+                  src="/escalation.png"
+                  alt="Escalation"
+                  className="absolute inset-0 w-full h-full object-cover object-[center_35%] transition duration-500 group-hover:scale-[1.05]"
+                  style={{ transform: "scale(var(--img-scale))" }}
+                />
+
+                <Link
+                  to="/projects#escalation"
+                  className="absolute inset-0 bg-black/10 group-hover:bg-black/35 transition duration-300 flex items-center justify-center"
+                >
+                  <span className="px-5 py-2 border border-white/90 text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition duration-300">
+                    View Project
+                  </span>
+                </Link>
+              </div>
+
+              <div className="mt-6">
+                <h3 className="text-xl font-semibold text-black dark:text-white">
+                  Escalation | Unreal Engine
+                </h3>
+                <p className="mt-2 text-base text-gray-600 dark:text-gray-400 leading-relaxed">
+                  System-driven hack-and-slash prototype
+                </p>
+              </div>
+            </a>
+
+            {/* LASER MASTER TOURNAMENT */}
+            <a
+              href="/projects/lmt"
+              className="group block cursor-pointer"
+              style={{ "--img-scale": 1.0 } as React.CSSProperties}
+            >
+              <div className="relative overflow-hidden rounded-2xl aspect-[3/2] bg-black ring-1 ring-black/10 dark:ring-white/10">
+                <img
+                  src="/lmt.png"
+                  alt=""
+                  aria-hidden="true"
+                  className="absolute inset-0 w-full h-full object-cover object-center scale-110 blur-xl opacity-25"
+                />
+
+                <img
+                  src="/lmt.png"
+                  alt="Laser Master Tournament"
+                  className="absolute inset-0 w-full h-full object-cover object-[center_40%] transition duration-500 group-hover:scale-[1.05]"
+                  style={{ transform: "scale(var(--img-scale))" }}
+                />
+
+                <Link
+                  to="/projects#lmt"
+                  className="absolute inset-0 bg-black/10 group-hover:bg-black/35 transition duration-300 flex items-center justify-center"
+                >
+                  <span className="px-5 py-2 border border-white/90 text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition duration-300">
+                    View Project
+                  </span>
+                </Link>
+              </div>
+
+              <div className="mt-6">
+                <h3 className="text-xl font-semibold text-black dark:text-white">
+                  Laser Master Tournament | Unreal Engine
+                </h3>
+                <p className="mt-2 text-base text-gray-600 dark:text-gray-400 leading-relaxed">
+                  First-person traversal gameplay prototype
+                </p>
+              </div>
+            </a>
+
+            {/* TECHTRAINING */}
+            <a
+              href="/projects/techtraining"
+              className="group block cursor-pointer"
+              style={{ "--img-scale": 1.0 } as React.CSSProperties}
+            >
+              <div className="relative overflow-hidden rounded-2xl aspect-[3/2] bg-black ring-1 ring-black/10 dark:ring-white/10">
+                <img
+                  src="/techtraining.png"
+                  alt=""
+                  aria-hidden="true"
+                  className="absolute inset-0 w-full h-full object-cover object-center scale-110 blur-xl opacity-25"
+                />
+
+                <img
+                  src="/techtraining.png"
+                  alt="TechTraining"
+                  className="absolute inset-0 w-full h-full object-cover object-[center_35%] transition duration-500 group-hover:scale-[1.05]"
+                  style={{ transform: "scale(var(--img-scale))" }}
+                />
+
+                <Link
+                  to="/projects#techtraining"
+                  className="absolute inset-0 bg-black/10 group-hover:bg-black/35 transition duration-300 flex items-center justify-center"
+                >
+                  <span className="px-5 py-2 border border-white/90 text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition duration-300">
+                    View Project
+                  </span>
+                </Link>
+              </div>
+
+              <div className="mt-6">
+                <h3 className="text-xl font-semibold text-black dark:text-white">
+                  TechTraining | Unity
+                </h3>
+                <p className="mt-2 text-base text-gray-600 dark:text-gray-400 leading-relaxed">
+                  Augmented reality training system
+                </p>
+              </div>
+            </a>
+
+            {/* HAGILY */}
+            <a
+              href="/projects/hagily"
+              className="group block cursor-pointer"
+              style={{ "--img-scale": 1.0 } as React.CSSProperties}
+            >
+              <div className="relative overflow-hidden rounded-2xl aspect-[3/2] bg-black ring-1 ring-black/10 dark:ring-white/10">
+                <img
+                  src="/hagily.png"
+                  alt=""
+                  aria-hidden="true"
+                  className="absolute inset-0 w-full h-full object-cover object-center scale-110 blur-xl opacity-25"
+                />
+
+                <img
+                  src="/hagily.png"
+                  alt="Hagily"
+                  className="absolute inset-0 w-full h-full object-cover object-[center_35%] transition duration-500 group-hover:scale-[1.05]"
+                  style={{ transform: "scale(var(--img-scale))" }}
+                />
+
+                <Link
+                  to="/projects#hagily"
+                  className="absolute inset-0 bg-black/10 group-hover:bg-black/35 transition duration-300 flex items-center justify-center"
+                >
+                  <span className="px-5 py-2 border border-white/90 text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition duration-300">
+                    View Project
+                  </span>
+                </Link>
+              </div>
+
+              <div className="mt-6">
+                <h3 className="text-xl font-semibold text-black dark:text-white">
+                  Hagily | Unity
+                </h3>
+                <p className="mt-2 text-base text-gray-600 dark:text-gray-400 leading-relaxed">
+                  Industrial digital twin simulation
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <div className="flex flex-col items-center mt-24">
+            <p className="text-lg font-semibold text-black dark:text-white mb-6">
+              Do you want to know more?
+            </p>
+
+            <a
+              href="/projects"
+              className="inline-flex items-center justify-center px-8 py-3 rounded-lg border border-[var(--border)] dark:border-[var(--border-light)]
+                text-black dark:text-white font-semibold tracking-wide
+                hover:opacity-80 transition"
+            >
+              View all projects
+            </a>
+          </div>
+        </div>
+      </section>
+      <SkillsSection />
+      <RecommendationSection />
+      <ContactSection />
+    </div>
+  );
+}
