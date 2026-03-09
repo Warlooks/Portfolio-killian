@@ -370,14 +370,16 @@ export default function Home() {
               Do you want to know more?
             </p>
 
-            <a
-              href="/projects"
-              className="inline-flex items-center justify-center px-8 py-3 rounded-lg border border-[var(--border)] dark:border-[var(--border-light)]
-                text-black dark:text-white font-semibold tracking-wide
-                hover:opacity-80 transition"
+            <Link
+              to="/projects"
+              className="inline-flex items-center justify-center
+             px-7 py-3 rounded-lg text-sm font-semibold
+             border text-black border-black
+             dark:text-white dark:border-white
+             transition duration-200 hover:opacity-80"
             >
               View all projects
-            </a>
+            </Link>
           </div>
         </div>
       </section>
