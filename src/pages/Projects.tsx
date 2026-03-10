@@ -46,7 +46,7 @@ export default function Projects() {
         title="Escalation"
         role="Game Designer / Unreal Engine Developer"
         meta="University Project · Unreal Engine"
-        images={["/escalation.png"]}
+        images={["/escalation.jpg"]}
         videoUrl="https://youtu.be/7p8JwH6oYfU"
         overview={[
           "Escalation is a hack-and-slash prototype developed during my fifth year at ICAN in a team of three. I was responsible for game design and level design, creating a combat-focused level culminating in a boss fight designed to validate the player's understanding of previously introduced mechanics.",
@@ -64,7 +64,7 @@ export default function Projects() {
         title="Laser Master Tournament"
         role="Game Designer / Developer"
         meta="University Project · Unreal Engine · Blueprints"
-        images={["/lmt.png"]}
+        images={["/lmt.jpg"]}
         videoUrl="https://youtu.be/UDnU5fgX8n4"
         overview={[
           "Laser Master Tournament is a first-person traversal prototype developed during my fifth year at ICAN. The project was created solo over three months to explore fast-paced movement mechanics and design a full level centered around player mobility and speed.",
@@ -85,10 +85,10 @@ export default function Projects() {
         role="Designer / Developer"
         meta="Professional Project · Unity · Augmented Reality · NDA Protected"
         images={[
-          "/techtraining.png",
+          "/techTraining.jpg",
           "/techtraining.mp4",
-          "/techtraining1.PNG",
-          "/techtraining2.PNG",
+          "/techtraining1.jpg",
+          "/techtraining2.jpg",
         ]}
         overview={[
           "TechTraining is an augmented reality training application developed at Axeal for a defense client. The objective was to design an interactive tool allowing foreign soldiers to understand complex technological systems through the manipulation of 3D models and visual explanations.",
@@ -106,7 +106,7 @@ export default function Projects() {
         title="Hagily"
         role="Designer / Developer / 3D Modeler"
         meta="Professional Project · Unity / Unreal · Digital Twin · NDA Protected"
-        images={["/hagily.png", "/hagily1.png", "/hagily2.png", "/hagily3.png"]}
+        images={["/hagily.jpg", "/hagily1.jpg", "/hagily2.jpg", "/hagily3.png"]}
         overview={[
           "Hagily is a digital twin application developed at Axeal for industrial predictive maintenance. The project aimed to visualize and monitor complex industrial systems in order to detect clogging phenomena inside radioactive material tanks and assist technicians in decision-making. The application translates industrial monitoring data into a clear 3D environment where technicians can visualize equipment, understand system states, and anticipate potential failures before they impact production.",
         ]}
@@ -125,10 +125,10 @@ export default function Projects() {
         role="System Designer / Unreal Engine Developer"
         meta="Professional Project (Axeal) · Unreal Engine 5 · Augmented Reality · NDA Protected"
         images={[
-          "/enginify.png",
-          "/enginify1.PNG",
-          "/enginify2.PNG",
-          "/enginify3.PNG",
+          "/enginify.jpg",
+          "/enginigy1.jpg",
+          "/enginify2.jpg",
+          "/enginify3.jpg",
         ]}
         overview={[
           "Enginify is an augmented reality application developed at Axeal to present the functioning of an industrial engine and its factory installation process. The goal was to create a clear and interactive experience allowing users to understand the system and its operational workflow.",
@@ -146,7 +146,7 @@ export default function Projects() {
         title="NEST"
         role="Game Designer / 3D Modeler"
         meta="University Project · Unity · Game Connection Showcase"
-        images={["/nest.png", "/nest2.png", "/nest3.jpg"]}
+        images={["/nest.jpg", "/nest2.jpg", "/nest3.jpg"]}
         videoUrl="https://youtu.be/cr5gtlCeVSY"
         overview={[
           "NEST is a hybrid game prototype developed during my third year at ICAN within a team of five students. The project explored the combination of a Trading Card Game with vehicle management in a hostile desert environment. Players control the N.E.S.T. vehicle while navigating the dangerous Zone. Using radar information and card-based abilities, they must manage resources, plan routes, and survive encounters while investigating the origin of a mysterious signal.",
@@ -209,8 +209,8 @@ export default function Projects() {
         meta="University Project · Unity · C#"
         videoUrl="https://www.youtube.com/watch?v=-oy2IiNVSPQ"
         images={[
-          "/singularite1.png",
-          "/singularite2.png",
+          "/singularite1.jpg",
+          "/singularite2.jpg",
           "/singularite3.png",
           "/singularite4.png",
           "/singularite5.png",

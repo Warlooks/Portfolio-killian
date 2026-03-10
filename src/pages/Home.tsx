@@ -209,14 +209,7 @@ export default function Home() {
             >
               <div className="relative overflow-hidden rounded-2xl aspect-[3/2] bg-black ring-1 ring-black/10 dark:ring-white/10">
                 <img
-                  src="/escalation.png"
-                  alt=""
-                  aria-hidden="true"
-                  className="absolute inset-0 w-full h-full object-cover object-center scale-110 blur-xl opacity-25"
-                />
-
-                <img
-                  src="/escalation.png"
+                  src="/escalation.jpg"
                   alt="Escalation"
                   className="absolute inset-0 w-full h-full object-cover object-[center_35%] transition duration-500 group-hover:scale-[1.05]"
                   style={{ transform: "scale(var(--img-scale))" }}
@@ -250,14 +243,7 @@ export default function Home() {
             >
               <div className="relative overflow-hidden rounded-2xl aspect-[3/2] bg-black ring-1 ring-black/10 dark:ring-white/10">
                 <img
-                  src="/lmt.png"
-                  alt=""
-                  aria-hidden="true"
-                  className="absolute inset-0 w-full h-full object-cover object-center scale-110 blur-xl opacity-25"
-                />
-
-                <img
-                  src="/lmt.png"
+                  src="/lmt.jpg"
                   alt="Laser Master Tournament"
                   className="absolute inset-0 w-full h-full object-cover object-[center_40%] transition duration-500 group-hover:scale-[1.05]"
                   style={{ transform: "scale(var(--img-scale))" }}
@@ -291,14 +277,7 @@ export default function Home() {
             >
               <div className="relative overflow-hidden rounded-2xl aspect-[3/2] bg-black ring-1 ring-black/10 dark:ring-white/10">
                 <img
-                  src="/techtraining.png"
-                  alt=""
-                  aria-hidden="true"
-                  className="absolute inset-0 w-full h-full object-cover object-center scale-110 blur-xl opacity-25"
-                />
-
-                <img
-                  src="/techtraining.png"
+                  src="/techTraining.jpg"
                   alt="TechTraining"
                   className="absolute inset-0 w-full h-full object-cover object-[center_35%] transition duration-500 group-hover:scale-[1.05]"
                   style={{ transform: "scale(var(--img-scale))" }}
@@ -332,14 +311,7 @@ export default function Home() {
             >
               <div className="relative overflow-hidden rounded-2xl aspect-[3/2] bg-black ring-1 ring-black/10 dark:ring-white/10">
                 <img
-                  src="/hagily.png"
-                  alt=""
-                  aria-hidden="true"
-                  className="absolute inset-0 w-full h-full object-cover object-center scale-110 blur-xl opacity-25"
-                />
-
-                <img
-                  src="/hagily.png"
+                  src="/hagily.jpg"
                   alt="Hagily"
                   className="absolute inset-0 w-full h-full object-cover object-[center_35%] transition duration-500 group-hover:scale-[1.05]"
                   style={{ transform: "scale(var(--img-scale))" }}
