@@ -80,7 +80,7 @@ export default function Home() {
       <section id="experience" className="w-full pt-6 pb-24">
         <div className="max-w-8xl mx-auto px-6">
           <h2 className="text-3xl font-semibold tracking-wide mb-20 text-left">
-            Experience
+            Experiences
           </h2>
 
           <div className="grid md:grid-cols-3 gap-20 text-center">
@@ -113,7 +113,7 @@ export default function Home() {
                 </ul>
 
                 <p className="mt-8 text-base font-semibold text-gray-800 dark:text-gray-200">
-                  Projects: <span className="font-bold">xHighlight</span>
+                  Project: <span className="font-bold">xHighlight</span>
                 </p>
               </div>
             </div>
