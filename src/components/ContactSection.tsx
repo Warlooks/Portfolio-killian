@@ -52,7 +52,7 @@ export default function ContactSection() {
 
           {/* CV */}
           <a
-            href="/cv.pdf"
+            href="/MARCANTEI_KILLIAN_CV.pdf"
             target="_blank"
             rel="noreferrer"
             className="px-5 py-3 rounded-lg border border-black/20 dark:border-white/20 text-black dark:text-white font-semibold transition hover:opacity-70"

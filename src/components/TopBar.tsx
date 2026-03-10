@@ -80,7 +80,7 @@ export default function TopBar({ darkMode, onToggleTheme }: TopBarProps) {
           </a>
 
           <a
-            href="/cv.pdf"
+            href="/MARCANTEI_KILLIAN_CV.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className={pillBtnClass}
