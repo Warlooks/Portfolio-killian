@@ -24,14 +24,14 @@ export default function Projects() {
   }, [location]);
 
   return (
-    <main className="min-h-screen bg-[var(--bg)] dark:bg-[var(--bg-dark)] text-black dark:text-white pt-20 pb-20">
-      <section className="w-full pt-10 pb-14">
-        <div className="max-w-[1850px] mx-auto px-6 xl:px-8">
-          <h1 className="text-[3.2rem] xl:text-[4.5rem] font-black leading-[0.95] tracking-[-0.02em] uppercase text-black dark:text-white">
+    <main className="min-h-screen bg-[var(--bg)] dark:bg-[var(--bg-dark)] text-black dark:text-white pt-16 md:pt-20 pb-16 md:pb-20">
+      <section className="w-full pt-8 md:pt-10 pb-10 md:pb-14">
+        <div className="max-w-[1850px] mx-auto px-4 sm:px-6 xl:px-8">
+          <h1 className="text-4xl sm:text-5xl xl:text-[4.5rem] font-black leading-[0.95] tracking-[-0.02em] uppercase text-black dark:text-white">
             Projects
           </h1>
 
-          <p className="mt-6 text-[1rem] xl:text-[1.08rem] leading-[1.65] text-gray-700 dark:text-gray-300">
+          <p className="mt-6 max-w-3xl text-sm sm:text-base xl:text-[1.08rem] leading-[1.65] text-gray-700 dark:text-gray-300">
             A selection of academic, professional, and personal projects
             exploring game design, interactive systems, and real-time 3D
             applications.

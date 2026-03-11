@@ -5,18 +5,19 @@ import { Link, useNavigate } from "react-router-dom";
 
 export default function Home() {
   const navigate = useNavigate();
+
   return (
-    <div className="max-w-7xl mx-auto px-6">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6">
       {/* HERO */}
-      <section id="about" className="pt-10 md:pt-14 pb-16">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-stretch">
+      <section id="about" className="pt-8 md:pt-14 pb-14 md:pb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 lg:gap-16 items-stretch">
           {/* PHOTO */}
           <div className="lg:col-span-4">
             <div className="rounded-2xl overflow-hidden border border-[var(--border)] dark:border-[var(--border-dark)] bg-black/5 dark:bg-white/5 lg:h-[560px]">
               <img
                 src="/profile.jpg"
                 alt="Portrait"
-                className="w-full h-full object-cover contrast-[102%] saturate-[95%]"
+                className="w-full h-full object-cover contrast-[102%] saturate-[95%] aspect-[4/5] lg:aspect-auto"
                 loading="lazy"
               />
             </div>
@@ -24,15 +25,15 @@ export default function Home() {
 
           {/* TEXTE */}
           <div className="lg:col-span-8 lg:h-[560px] flex flex-col justify-center">
-            <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight leading-none">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-none">
               KILLIAN MARCANTEI
             </h1>
 
-            <p className="mt-4 text-3xl md:text-4xl font-extrabold tracking-wide">
+            <p className="mt-4 text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-wide">
               SYSTEM DESIGNER
             </p>
 
-            <div className="mt-8 space-y-6 text-base md:text-lg leading-relaxed max-w-3xl">
+            <div className="mt-6 md:mt-8 space-y-5 md:space-y-6 text-base md:text-lg leading-relaxed max-w-3xl">
               <p>
                 Designing progression systems, player mechanics, and
                 state-driven architectures with clarity, scalability, and
@@ -59,7 +60,7 @@ export default function Home() {
       </section>
 
       {/* VIDEO BANDEROLE */}
-      <section className="pb-20">
+      <section className="pb-16 md:pb-20">
         <div className="rounded-2xl overflow-hidden border border-[var(--border)] dark:border-[var(--border-dark)] bg-black/5 dark:bg-white/5 shadow-sm">
           <video
             src="/showreel.mp4"
@@ -77,20 +78,20 @@ export default function Home() {
         </p>
       </section>
 
-      <section id="experience" className="w-full pt-6 pb-24">
-        <div className="max-w-8xl mx-auto px-6">
-          <h2 className="text-3xl font-semibold tracking-wide mb-20 text-left">
+      <section id="experience" className="w-full pt-4 md:pt-6 pb-20 md:pb-24">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-semibold tracking-wide mb-12 md:mb-20 text-left">
             Experiences
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-20 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-14 lg:gap-20 text-center">
             {/* DASSAULT */}
             <div className="flex flex-col items-center space-y-8">
               <div className="h-32 flex items-center justify-center">
                 <img
                   src="/dassault.png"
                   alt="Dassault Systèmes"
-                  className="h-28 object-contain opacity-85 hover:opacity-100 transition dark:invert"
+                  className="h-24 md:h-28 object-contain opacity-85 hover:opacity-100 transition dark:invert"
                 />
               </div>
 
@@ -101,13 +102,13 @@ export default function Home() {
                 </p>
 
                 <ul className="text-sm text-gray-700 dark:text-gray-300 space-y-3">
-                  <li className="whitespace-nowrap">
+                  <li className="leading-relaxed">
                     Contributed to large-scale interconnected 3D architecture
                   </li>
-                  <li className="whitespace-nowrap">
+                  <li className="leading-relaxed">
                     Implemented state-synchronized front-end systems
                   </li>
-                  <li className="whitespace-nowrap">
+                  <li className="leading-relaxed">
                     Delivered production-grade features via CI/CD
                   </li>
                 </ul>
@@ -120,11 +121,11 @@ export default function Home() {
 
             {/* AXEAL */}
             <div className="flex flex-col items-center space-y-8">
-              <div className="h- flex items-center justify-center">
+              <div className="h-32 flex items-center justify-center">
                 <img
                   src="/axeal.png"
                   alt="Axeal"
-                  className="h-30 scale-[0.80] object-contain opacity-90 hover:opacity-100 transition duration dark:invert"
+                  className="h-24 md:h-28 scale-[0.80] object-contain opacity-90 hover:opacity-100 transition dark:invert"
                 />
               </div>
 
@@ -135,18 +136,18 @@ export default function Home() {
                 </p>
 
                 <ul className="text-sm text-gray-700 dark:text-gray-300 space-y-3">
-                  <li className="whitespace-nowrap">
+                  <li className="leading-relaxed">
                     Designed modular interaction systems (UE5 / Unity)
                   </li>
-                  <li className="whitespace-nowrap">
+                  <li className="leading-relaxed">
                     Structured state-driven behaviors & progression logic
                   </li>
-                  <li className="whitespace-nowrap">
+                  <li className="leading-relaxed">
                     Delivered scalable real-time applications
                   </li>
                 </ul>
 
-                <p className="mt-8 text-base font-semibold text-gray-800 dark:text-gray-200">
+                <p className="mt-8 text-base font-semibold text-gray-800 dark:text-gray-200 leading-relaxed">
                   Projects: <span className="font-bold">Hagily</span>{" "}
                   <span className="opacity-60">•</span>{" "}
                   <span className="font-bold">Enginify</span>{" "}
@@ -162,7 +163,7 @@ export default function Home() {
                 <img
                   src="/deathscape.png"
                   alt="DeathScape"
-                  className="h-28 scale-115 object-contain opacity-85 hover:opacity-100 transition duration dark:invert"
+                  className="h-24 md:h-28 scale-110 object-contain opacity-85 hover:opacity-100 transition dark:invert"
                 />
               </div>
 
@@ -173,13 +174,13 @@ export default function Home() {
                 </p>
 
                 <ul className="text-sm text-gray-700 dark:text-gray-300 space-y-3">
-                  <li className="whitespace-nowrap">
+                  <li className="leading-relaxed">
                     Designed interconnected puzzle & progression systems
                   </li>
-                  <li className="whitespace-nowrap">
+                  <li className="leading-relaxed">
                     Built Unity prototypes validating interaction logic
                   </li>
-                  <li className="whitespace-nowrap">
+                  <li className="leading-relaxed">
                     Structured complete player experience flows
                   </li>
                 </ul>
@@ -195,15 +196,15 @@ export default function Home() {
       </section>
 
       <section id="projects" className="w-full py-1">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl font-semibold tracking-wide mb-20 text-left text-black dark:text-white">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-semibold tracking-wide mb-12 md:mb-20 text-left text-black dark:text-white">
             Projects
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-x-16 gap-y-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-14 md:gap-y-20">
             {/* ESCALATION */}
-            <a
-              href="/projects/escalation"
+            <Link
+              to="/projects#escalation"
               className="group block cursor-pointer"
               style={{ "--img-scale": 1.0 } as React.CSSProperties}
             >
@@ -215,14 +216,11 @@ export default function Home() {
                   style={{ transform: "scale(var(--img-scale))" }}
                 />
 
-                <Link
-                  to="/projects#escalation"
-                  className="absolute inset-0 bg-black/10 group-hover:bg-black/35 transition duration-300 flex items-center justify-center"
-                >
+                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/35 transition duration-300 flex items-center justify-center">
                   <span className="px-5 py-2 border border-white/90 text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition duration-300">
                     View Project
                   </span>
-                </Link>
+                </div>
               </div>
 
               <div className="mt-6">
@@ -233,11 +231,11 @@ export default function Home() {
                   System-driven hack-and-slash prototype
                 </p>
               </div>
-            </a>
+            </Link>
 
             {/* LASER MASTER TOURNAMENT */}
-            <a
-              href="/projects/lmt"
+            <Link
+              to="/projects#lmt"
               className="group block cursor-pointer"
               style={{ "--img-scale": 1.0 } as React.CSSProperties}
             >
@@ -249,14 +247,11 @@ export default function Home() {
                   style={{ transform: "scale(var(--img-scale))" }}
                 />
 
-                <Link
-                  to="/projects#lmt"
-                  className="absolute inset-0 bg-black/10 group-hover:bg-black/35 transition duration-300 flex items-center justify-center"
-                >
+                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/35 transition duration-300 flex items-center justify-center">
                   <span className="px-5 py-2 border border-white/90 text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition duration-300">
                     View Project
                   </span>
-                </Link>
+                </div>
               </div>
 
               <div className="mt-6">
@@ -267,11 +262,11 @@ export default function Home() {
                   First-person traversal gameplay prototype
                 </p>
               </div>
-            </a>
+            </Link>
 
             {/* TECHTRAINING */}
-            <a
-              href="/projects/techtraining"
+            <Link
+              to="/projects#techtraining"
               className="group block cursor-pointer"
               style={{ "--img-scale": 1.0 } as React.CSSProperties}
             >
@@ -283,14 +278,11 @@ export default function Home() {
                   style={{ transform: "scale(var(--img-scale))" }}
                 />
 
-                <Link
-                  to="/projects#techtraining"
-                  className="absolute inset-0 bg-black/10 group-hover:bg-black/35 transition duration-300 flex items-center justify-center"
-                >
+                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/35 transition duration-300 flex items-center justify-center">
                   <span className="px-5 py-2 border border-white/90 text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition duration-300">
                     View Project
                   </span>
-                </Link>
+                </div>
               </div>
 
               <div className="mt-6">
@@ -301,11 +293,11 @@ export default function Home() {
                   Augmented reality training system
                 </p>
               </div>
-            </a>
+            </Link>
 
             {/* HAGILY */}
-            <a
-              href="/projects/hagily"
+            <Link
+              to="/projects#hagily"
               className="group block cursor-pointer"
               style={{ "--img-scale": 1.0 } as React.CSSProperties}
             >
@@ -317,14 +309,11 @@ export default function Home() {
                   style={{ transform: "scale(var(--img-scale))" }}
                 />
 
-                <Link
-                  to="/projects#hagily"
-                  className="absolute inset-0 bg-black/10 group-hover:bg-black/35 transition duration-300 flex items-center justify-center"
-                >
+                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/35 transition duration-300 flex items-center justify-center">
                   <span className="px-5 py-2 border border-white/90 text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition duration-300">
                     View Project
                   </span>
-                </Link>
+                </div>
               </div>
 
               <div className="mt-6">
@@ -335,11 +324,11 @@ export default function Home() {
                   Industrial digital twin simulation
                 </p>
               </div>
-            </a>
+            </Link>
           </div>
 
-          <div className="flex flex-col items-center mt-24">
-            <p className="text-lg font-semibold text-black dark:text-white mb-6">
+          <div className="flex flex-col items-center mt-16 md:mt-24">
+            <p className="text-lg font-semibold text-black dark:text-white mb-6 text-center">
               Do you want to know more?
             </p>
 
@@ -349,17 +338,14 @@ export default function Home() {
                 navigate("/projects");
                 window.scrollTo({ top: 0, behavior: "smooth" });
               }}
-              className="relative z-50 inline-flex items-center justify-center
-             px-7 py-3 rounded-lg text-sm font-semibold
-             border text-black border-black
-             dark:text-white dark:border-white
-             transition duration-200 hover:opacity-80"
+              className="relative z-50 inline-flex items-center justify-center px-7 py-3 rounded-lg text-sm font-semibold border text-black border-black dark:text-white dark:border-white transition duration-200 hover:opacity-80"
             >
               View all projects
             </button>
           </div>
         </div>
       </section>
+
       <SkillsSection />
       <RecommendationSection />
       <ContactSection />
