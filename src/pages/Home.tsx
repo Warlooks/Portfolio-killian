@@ -332,16 +332,13 @@ export default function Home() {
               Do you want to know more?
             </p>
 
-            <button
-              type="button"
-              onClick={() => {
-                navigate("/projects");
-                window.scrollTo({ top: 0, behavior: "smooth" });
-              }}
+            <Link
+              to="/projects"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               className="relative z-50 inline-flex items-center justify-center px-7 py-3 rounded-lg text-sm font-semibold border text-black border-black dark:text-white dark:border-white transition duration-200 hover:opacity-80"
             >
               View all projects
-            </button>
+            </Link>
           </div>
         </div>
       </section>
