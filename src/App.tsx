@@ -33,7 +33,7 @@ function App() {
       />
 
       {/* padding-top pour compenser la topbar fixed */}
-      <main className="pt-20">
+      <main className="pt-16 sm:pt-20">
         <Routes>
           <Route path="/" element={<Home />} />
 

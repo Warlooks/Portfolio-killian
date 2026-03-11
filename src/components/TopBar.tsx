@@ -1,4 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
+import { useState } from "react";
 
 type TopBarProps = {
   darkMode: boolean;
@@ -12,6 +13,7 @@ export default function TopBar({ darkMode, onToggleTheme }: TopBarProps) {
   const location = useLocation();
   const isProjectsPage = location.pathname === "/projects";
   const isHomePage = location.pathname === "/";
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinkClass =
     "relative font-bold transition-opacity hover:opacity-90 " +
@@ -25,17 +27,23 @@ export default function TopBar({ darkMode, onToggleTheme }: TopBarProps) {
     "bg-transparent hover:bg-black/5 dark:hover:bg-white/5 transition";
 
   const pillBtnClass =
-    "h-10 px-6 flex items-center justify-center rounded-md border border-[var(--border)] dark:border-[var(--border-dark)] " +
+    "h-10 px-4 sm:px-6 flex items-center justify-center rounded-md border border-[var(--border)] dark:border-[var(--border-dark)] " +
     "bg-transparent hover:bg-black/5 dark:hover:bg-white/5 transition text-sm font-bold tracking-wide";
+
+  const closeMobileMenu = () => setMobileMenuOpen(false);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-[var(--border)] dark:border-[var(--border-dark)] bg-[var(--bg)]/80 dark:bg-[var(--bg-dark)]/80 backdrop-blur">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Link to="/" className="text-2xl font-bold">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between gap-3">
+        <Link
+          to="/"
+          onClick={closeMobileMenu}
+          className="text-lg sm:text-2xl font-bold leading-none truncate"
+        >
           Killian Marcantei
         </Link>
 
-        <nav className="hidden md:flex items-center gap-10">
+        <nav className="hidden lg:flex items-center gap-8 xl:gap-10">
           {isHomePage && (
             <>
               <a href="#about" className={navLinkClass}>
@@ -62,18 +70,21 @@ export default function TopBar({ darkMode, onToggleTheme }: TopBarProps) {
           {isProjectsPage && (
             <Link
               to="/"
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              className="flex items-center gap-2"
+              onClick={() => {
+                closeMobileMenu();
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
+              className="flex items-center gap-2 font-bold"
             >
               ← Back to Home
             </Link>
           )}
         </nav>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 sm:gap-3">
           <a
             href="mailto:k.marcantei@hotmail.com?subject=Contact%20portfolio"
-            className={pillBtnClass}
+            className={`${pillBtnClass} hidden sm:inline-flex`}
             title="Email"
           >
             Email
@@ -83,7 +94,7 @@ export default function TopBar({ darkMode, onToggleTheme }: TopBarProps) {
             href="/MARCANTEI_KILLIAN_CV.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className={pillBtnClass}
+            className={`${pillBtnClass} hidden sm:inline-flex`}
           >
             CV
           </a>
@@ -92,7 +103,7 @@ export default function TopBar({ darkMode, onToggleTheme }: TopBarProps) {
             href="https://www.linkedin.com/in/killian-marcantei/"
             target="_blank"
             rel="noopener noreferrer"
-            className={iconBtnClass}
+            className={`${iconBtnClass} hidden sm:flex`}
             title="LinkedIn"
           >
             <img
@@ -106,7 +117,7 @@ export default function TopBar({ darkMode, onToggleTheme }: TopBarProps) {
             href="https://killianm.itch.io/"
             target="_blank"
             rel="noopener noreferrer"
-            className={iconBtnClass}
+            className={`${iconBtnClass} hidden sm:flex`}
             title="itch.io"
           >
             <img src="/itchiologo.svg" alt="itch.io" className={itchImgClass} />
@@ -149,8 +160,159 @@ export default function TopBar({ darkMode, onToggleTheme }: TopBarProps) {
               </svg>
             )}
           </button>
+
+          <button
+            type="button"
+            onClick={() => setMobileMenuOpen((prev) => !prev)}
+            className={`${iconBtnClass} lg:hidden`}
+            aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={mobileMenuOpen}
+          >
+            {mobileMenuOpen ? (
+              <svg
+                className="w-5 h-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            ) : (
+              <svg
+                className="w-5 h-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M4 7h16M4 12h16M4 17h16"
+                />
+              </svg>
+            )}
+          </button>
         </div>
       </div>
+
+      {mobileMenuOpen && (
+        <div className="lg:hidden border-t border-[var(--border)] dark:border-[var(--border-dark)] bg-[var(--bg)]/95 dark:bg-[var(--bg-dark)]/95 backdrop-blur">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex flex-col gap-3">
+            {isHomePage && (
+              <>
+                <a
+                  href="#about"
+                  onClick={closeMobileMenu}
+                  className="text-sm font-bold py-2"
+                >
+                  About
+                </a>
+                <a
+                  href="#experience"
+                  onClick={closeMobileMenu}
+                  className="text-sm font-bold py-2"
+                >
+                  Experience
+                </a>
+                <a
+                  href="#projects"
+                  onClick={closeMobileMenu}
+                  className="text-sm font-bold py-2"
+                >
+                  Projects
+                </a>
+                <a
+                  href="#skills"
+                  onClick={closeMobileMenu}
+                  className="text-sm font-bold py-2"
+                >
+                  Skills
+                </a>
+                <a
+                  href="#recommendation"
+                  onClick={closeMobileMenu}
+                  className="text-sm font-bold py-2"
+                >
+                  Recommendation
+                </a>
+                <a
+                  href="#contact"
+                  onClick={closeMobileMenu}
+                  className="text-sm font-bold py-2"
+                >
+                  Contact
+                </a>
+              </>
+            )}
+
+            {isProjectsPage && (
+              <Link
+                to="/"
+                onClick={() => {
+                  closeMobileMenu();
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+                className="text-sm font-bold py-2"
+              >
+                ← Back to Home
+              </Link>
+            )}
+
+            <div className="pt-3 mt-2 border-t border-[var(--border)] dark:border-[var(--border-dark)] grid grid-cols-2 gap-3">
+              <a
+                href="mailto:k.marcantei@hotmail.com?subject=Contact%20portfolio"
+                className={`${pillBtnClass} w-full`}
+                title="Email"
+              >
+                Email
+              </a>
+
+              <a
+                href="/MARCANTEI_KILLIAN_CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${pillBtnClass} w-full`}
+              >
+                CV
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/killian-marcantei/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${iconBtnClass} w-full`}
+                title="LinkedIn"
+              >
+                <img
+                  src="/linkedinlogo.svg"
+                  alt="LinkedIn"
+                  className={linkedInImgClass}
+                />
+              </a>
+
+              <a
+                href="https://killianm.itch.io/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${iconBtnClass} w-full`}
+                title="itch.io"
+              >
+                <img
+                  src="/itchiologo.svg"
+                  alt="itch.io"
+                  className={itchImgClass}
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
     </header>
   );
 }
