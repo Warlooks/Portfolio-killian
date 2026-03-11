@@ -1,11 +1,9 @@
 import RecommendationSection from "../components/RecommendationSection";
 import SkillsSection from "../components/SkillsSection";
 import ContactSection from "../components/ContactSection";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Home() {
-  const navigate = useNavigate();
-
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6">
       {/* HERO */}
